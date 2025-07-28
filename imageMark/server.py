@@ -6,7 +6,8 @@ import numpy as np
 import re
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "http://192.168.27.50:5173"}})
+
 
 model = YOLO("my_model.onnx")
 
