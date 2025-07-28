@@ -8,7 +8,7 @@ import re
 app = Flask(__name__)
 CORS(app)
 
-model = YOLO("../my_model/my_model.onnx")
+model = YOLO("my_model.onnx")
 
 @app.route('/predict', methods=['POST'])
 def predict():
