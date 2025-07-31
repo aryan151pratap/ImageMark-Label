@@ -17,7 +17,7 @@ def after_request(response):
     response.headers.add("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
     return response
 
-model = YOLO("my_model.onnx")
+model = YOLO("bestn.onnx")
 
 @app.route("/ping")
 def ping():
